@@ -2,9 +2,9 @@
 
 # pylint: disable = no-name-in-module
 
-from datetime import datetime, date
+from datetime import datetime
 
-from flask import Flask, Response, request
+from flask import Flask, request
 
 from date_functions import (convert_to_datetime, get_day_of_week_on,
                             get_days_between, get_current_age)
@@ -31,6 +31,7 @@ def index():
 
 @app.route("/between", methods=["POST"])
 def between():
+    """route for between."""
     add_to_history(request)
     data = request.json
     if data.get("first") and data.get("last"):
@@ -51,6 +52,7 @@ def between():
 
 @app.route("/weekday", methods=["POST"])
 def weekday():
+    """route for weekday."""
     add_to_history(request)
     data = request.json
     if data.get("date"):
@@ -70,6 +72,7 @@ def weekday():
 
 @app.route("/history", methods=["GET", "DELETE"])
 def history():
+    """route for history."""
     add_to_history(request)
 
     if request.method == "GET":
@@ -95,7 +98,7 @@ def history():
 
 @app.route("/current_age", methods=["GET"])
 def current_age():
-
+    """route for current_age."""
     add_to_history(request)
 
     args = request.args.to_dict()
@@ -110,13 +113,12 @@ def current_age():
 
             age = get_current_age(day)
 
-        except:
+        except ValueError:
             return {"error": "Value for data parameter is invalid."}, 400
 
         return {"current_age": age}, 200
 
-    else:
-        return {"error": "Date parameter is required."}, 400
+    return {"error": "Date parameter is required."}, 400
 
 
 if __name__ == "__main__":
