@@ -4,7 +4,7 @@
 
 from datetime import datetime, date
 
-from flask import Flask, Response, request, jsonify
+from flask import Flask, Response, request
 
 from date_functions import (convert_to_datetime, get_day_of_week_on,
                             get_days_between, get_current_age)
@@ -28,7 +28,14 @@ def add_to_history(current_request):
 @app.get("/")
 def index():
     """Returns an API welcome messsage."""
-    return jsonify({"message": "Welcome to the Days API."})
+    return {"message": "Welcome to the Days API."}
+
+
+@app.route("/scrape", methods=["GET", "POST"])
+def scrape():
+
+
+pass
 
 
 if __name__ == "__main__":
