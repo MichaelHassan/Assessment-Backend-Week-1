@@ -1,16 +1,26 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.12.4, pytest-8.3.2, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Backend-Week-1/Assessment-Backend-Week-1
-collected 0 items / 1 error
+collected 112 items
 
-!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-=============================== 1 error in 0.10s ===============================
+days_api/test_api.py ................................................... [ 45%]
+...FFFFF..FFFFFFFFFFFF                                                   [ 65%]
+days_api/test_date_functions.py .......................................  [100%]
+
+======================== 17 failed, 95 passed in 0.32s =========================
 ************* Module app
-days_api/app.py:38:1: E0001: Parsing failed: 'expected an indented block after function definition on line 35 (app, line 38)' (syntax-error)
+days_api/app.py:81:0: C0301: Line too long (109/100) (line-too-long)
+days_api/app.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:53:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:72:0: C0116: Missing function or method docstring (missing-function-docstring)
+days_api/app.py:72:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+days_api/app.py:5:0: W0611: Unused date imported from datetime (unused-import)
+days_api/app.py:7:0: W0611: Unused Response imported from flask (unused-import)
+days_api/app.py:9:0: W0611: Unused get_current_age imported from date_functions (unused-import)
 ************* Module date_functions
 days_api/date_functions.py:11:8: W0707: Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Unable to convert value to datetime.') from exc' (raise-missing-from)
-days_api/date_functions.py:26:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+days_api/date_functions.py:27:0: R0911: Too many return statements (7/6) (too-many-return-statements)
 
 -----------------------------------
-Your code has been rated at 7.81/10
+Your code has been rated at 8.75/10
 
