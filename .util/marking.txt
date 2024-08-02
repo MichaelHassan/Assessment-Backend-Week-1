@@ -1,32 +1,16 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.12.4, pytest-8.3.2, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Backend-Week-1/Assessment-Backend-Week-1
-collected 112 items
+collected 0 items / 1 error
 
-days_api/test_api.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 45%]
-FFFFFFFFFFFFFFFFFFFFFF                                                   [ 65%]
-days_api/test_date_functions.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF  [100%]
-
-============================= 112 failed in 0.40s ==============================
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.10s ===============================
 ************* Module app
-days_api/app.py:5:0: W0611: Unused date imported from datetime (unused-import)
-days_api/app.py:7:0: W0611: Unused Response imported from flask (unused-import)
-days_api/app.py:7:0: W0611: Unused request imported from flask (unused-import)
-days_api/app.py:9:0: W0611: Unused convert_to_datetime imported from date_functions (unused-import)
-days_api/app.py:9:0: W0611: Unused get_day_of_week_on imported from date_functions (unused-import)
-days_api/app.py:9:0: W0611: Unused get_days_between imported from date_functions (unused-import)
-days_api/app.py:9:0: W0611: Unused get_current_age imported from date_functions (unused-import)
+days_api/app.py:38:1: E0001: Parsing failed: 'expected an indented block after function definition on line 35 (app, line 38)' (syntax-error)
 ************* Module date_functions
-days_api/date_functions.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/date_functions.py:6:24: W0613: Unused argument 'date_val' (unused-argument)
-days_api/date_functions.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/date_functions.py:10:21: W0613: Unused argument 'first' (unused-argument)
-days_api/date_functions.py:10:38: W0613: Unused argument 'last' (unused-argument)
-days_api/date_functions.py:14:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/date_functions.py:14:23: W0613: Unused argument 'date_val' (unused-argument)
-days_api/date_functions.py:18:0: C0116: Missing function or method docstring (missing-function-docstring)
-days_api/date_functions.py:18:20: W0613: Unused argument 'birthdate' (unused-argument)
+days_api/date_functions.py:11:8: W0707: Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Unable to convert value to datetime.') from exc' (raise-missing-from)
+days_api/date_functions.py:26:0: R0911: Too many return statements (7/6) (too-many-return-statements)
 
 -----------------------------------
-Your code has been rated at 2.73/10
+Your code has been rated at 7.81/10
 
